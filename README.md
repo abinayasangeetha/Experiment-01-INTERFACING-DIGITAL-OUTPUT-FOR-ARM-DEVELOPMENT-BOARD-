@@ -1,8 +1,14 @@
-# Experiment-01-INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
+```
+### NAME: ABINAYA S
+### REG NO: 212222230002
+```
+# Experiment 01 INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
  
 
-## Aim: To Interface a Digital output (LED) to ARM development board and write a blink code 
-## Components required: STM32 CUBE IDE, NUCLEO ARM DEVELOPMENT BOARD  
+## Aim: 
+To Interface a Digital output (LED) to ARM development board and write a blink code 
+## Components required: 
+STM32 CUBE IDE, NUCLEO ARM DEVELOPMENT BOARD  
 ## Theory 
 The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
 
@@ -85,36 +91,100 @@ void ledblink();
 
 void ledblink()
 {
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
-	HAL_Delay(1000);
-	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-	HAL_Delay(500);
-
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5,GPIO_PIN_SET);
+		HAL_Delay(5000);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+		HAL_Delay(5000);
 }
-
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-
+static void MX_UCPD1_Init(void);
+static void MX_USART4_UART_Init(void);
 int main(void)
 {
+  
   HAL_Init();
-
   SystemClock_Config();
 
   MX_GPIO_Init();
-
+  MX_UCPD1_Init();
+  MX_USART4_UART_Init();
   while (1)
   {
 	  ledblink();
-  
+    
   }
+ }
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+ HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
+RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+  RCC_OscInitStruct.PLL.PLLN = 8;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+static void MX_UCPD1_Init(void)
+{
+
+  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_UCPD1);
+
+  LL_IOP_GRP1_EnableClock(LL_IOP_GRP1_PERIPH_GPIOB);
+  LL_IOP_GRP1_EnableClock(LL_IOP_GRP1_PERIPH_GPIOA);
+  GPIO_InitStruct.Pin = LL_GPIO_PIN_15;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = LL_GPIO_PIN_8;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+}
+static void MX_USART4_UART_Init(void)
+{
+
+   huart4.Instance = USART4;
+  huart4.Init.BaudRate = 115200;
+  huart4.Init.WordLength = UART_WORDLENGTH_7B;
+  huart4.Init.StopBits = UART_STOPBITS_1;
+  huart4.Init.Parity = UART_PARITY_NONE;
+  huart4.Init.Mode = UART_MODE_TX_RX;
+  huart4.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart4.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart4.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart4.Init.ClockPrescaler = UART_PRESCALER_DIV1;
+  huart4.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
 }
 
 ```
-## Output  :
- ![LED ON](https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/8cb83008-e6de-49b0-8672-51d0e711bf92)
 
- ![LED OFF](https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/6a4f7657-3fa4-49d2-b5ca-aaee0fbad3fa)
+## Output  :
+### Led is ON:
+<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/8cb83008-e6de-49b0-8672-51d0e711bf92" width=475 height=475>
+
+### Led id OFF: 
+<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/6a4f7657-3fa4-49d2-b5ca-aaee0fbad3fa" width=475 height=475>
+
 
  
  
