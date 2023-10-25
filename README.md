@@ -40,46 +40,46 @@ The main features of LPC2148 include the following.
 
 ## Procedure:
  1. click on STM 32 CUBE IDE, the following screen will appear 
- <img src="![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png" width=455 height=455>
+ <img src="![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png" width=450 height=450>
 
  2. click on FILE, click on new stm 32 project 
- <img src="https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png" width=455 height=455>
-<img src="https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png" width=455 height=455>
+ <img src="https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png" width=450 height=450>
+<img src="https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png" width=450 height=450>
  3. select the target to be programmed  as shown below and click on next 
 
-<img src="https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png" width=450 height=450>
 
  4.select the program name 
-<img src="https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png" width=450 height=450>
 
 
  5. corresponding ioc file will be generated automatically 
-<img src="https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png" width=450 height=450>
 
  6.select the appropriate pins as gipo, in or out, USART or required options and configure 
-<img src="https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png" width=455 height=455>
-<img src="https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png" width=450 height=450>
+<img src="https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png" width=450 height=450>
 
 
  7.click on cntrl+S , automaticall C program will be generated 
-<img src="https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png" width=455 height=455>
-<img src="https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png" width=450 height=450>
+<img src="https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png" width=450 height=450>
 
  8. edit the program and as per required 
-<img src="https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png" width=450 height=450>
 
  9. use project and build all 
-<img src=" https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png" width=455 height=455>
+<img src=" https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png" width=450 height=450>
 
  10. once the project is bulild link the hexfile build in stm32cube ide using post processor build 
-<img src="https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png" width=450 height=450>
 
  11. click on debug option 
-<img src="https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png" width=450 height=450>
 
 
  12. connect the stm nucleo board and click on run 
-<img src="https://user-images.githubusercontent.com/36288975/226189649-b5dff389-91df-4eca-b84a-1127c6562637.png" width=455 height=455>
+<img src="https://user-images.githubusercontent.com/36288975/226189649-b5dff389-91df-4eca-b84a-1127c6562637.png" width=450 height=450>
 
 
 
@@ -182,10 +182,10 @@ static void MX_USART4_UART_Init(void)
 
 ## Output  :
 ### Led is ON:
-<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/8cb83008-e6de-49b0-8672-51d0e711bf92" width=455 height=455>
+<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/8cb83008-e6de-49b0-8672-51d0e711bf92" width=450 height=450>
 
 ### Led id OFF: 
-<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/6a4f7657-3fa4-49d2-b5ca-aaee0fbad3fa" width=455 height=455>
+<img src="https://github.com/abinayasangeetha/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/119393675/6a4f7657-3fa4-49d2-b5ca-aaee0fbad3fa" width=450 height=450>
 
 
  
