@@ -69,7 +69,7 @@ The main features of LPC2148 include the following.
 <img src="https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png" width=450 height=450>
 
  9. use project and build all 
-<img src=" https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png" width=450 height=450>
+<img src="https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png" width=450 height=450>
 
  10. once the project is bulild link the hexfile build in stm32cube ide using post processor build 
 <img src="https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png" width=450 height=450>
